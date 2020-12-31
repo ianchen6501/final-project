@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
   setCurrentDate,
-  setDailyRoutinesKey,
-  saveAllDailyRoutines,
   saveDailyRoutines,
   saveRoutes,
   initDailyRoutinesKey,
@@ -86,7 +84,7 @@ export default function DayLists() {
     if (dailyRoutines === null) {
       dispatch(initDailyRoutinesKey(dates, 1, 1));
     }
-  }, [dispatch, startDate, endDate, calcDates]);
+  }, [dispatch, startDate, endDate, calcDates, dailyRoutines]);
 
   // TODO: 存 schdule、post-it、marker
   function handleSaveClick() {

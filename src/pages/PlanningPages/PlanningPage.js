@@ -398,7 +398,7 @@ export default function PlanningPage() {
     dispatch(initSchedules(1, 1));
     dispatch(initMarkers(1, 1));
     dispatch(initPostIts(1, 1));
-  }, []);
+  }, [dispatch]);
 
   return (
     //  DropDragContext
