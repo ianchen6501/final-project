@@ -67,7 +67,7 @@ const Next = styled.div`
     props.$inactive &&
     `
   color: ${props.theme.secondaryColors.secondary};
-`}
+  `}
 `;
 
 export default function Paginator({
