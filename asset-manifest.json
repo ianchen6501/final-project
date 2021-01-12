@@ -1,29 +1,32 @@
 {
   "files": {
     "main.css": "/final-project/static/css/main.c031c832.chunk.css",
-    "main.js": "/final-project/static/js/main.456bf13e.chunk.js",
-    "main.js.map": "/final-project/static/js/main.456bf13e.chunk.js.map",
+    "main.js": "/final-project/static/js/main.3948f035.chunk.js",
+    "main.js.map": "/final-project/static/js/main.3948f035.chunk.js.map",
     "runtime-main.js": "/final-project/static/js/runtime-main.0abe1cdf.js",
     "runtime-main.js.map": "/final-project/static/js/runtime-main.0abe1cdf.js.map",
     "static/css/2.e25789d4.chunk.css": "/final-project/static/css/2.e25789d4.chunk.css",
-    "static/js/2.da4e6e18.chunk.js": "/final-project/static/js/2.da4e6e18.chunk.js",
-    "static/js/2.da4e6e18.chunk.js.map": "/final-project/static/js/2.da4e6e18.chunk.js.map",
+    "static/js/2.fc659616.chunk.js": "/final-project/static/js/2.fc659616.chunk.js",
+    "static/js/2.fc659616.chunk.js.map": "/final-project/static/js/2.fc659616.chunk.js.map",
     "index.html": "/final-project/index.html",
     "static/css/2.e25789d4.chunk.css.map": "/final-project/static/css/2.e25789d4.chunk.css.map",
     "static/css/main.c031c832.chunk.css.map": "/final-project/static/css/main.c031c832.chunk.css.map",
-    "static/js/2.da4e6e18.chunk.js.LICENSE.txt": "/final-project/static/js/2.da4e6e18.chunk.js.LICENSE.txt",
+    "static/js/2.fc659616.chunk.js.LICENSE.txt": "/final-project/static/js/2.fc659616.chunk.js.LICENSE.txt",
     "static/media/frontpage_icon-01.1e587300.jpg": "/final-project/static/media/frontpage_icon-01.1e587300.jpg",
     "static/media/frontpage_icon-02.cfd6a08f.jpg": "/final-project/static/media/frontpage_icon-02.cfd6a08f.jpg",
     "static/media/frontpage_icon-03.cf93fe95.jpg": "/final-project/static/media/frontpage_icon-03.cf93fe95.jpg",
     "static/media/logo.c7dd8706.svg": "/final-project/static/media/logo.c7dd8706.svg",
     "static/media/logo_static.33ee3c7f.svg": "/final-project/static/media/logo_static.33ee3c7f.svg",
-    "static/media/taiwan.8b913e25.png": "/final-project/static/media/taiwan.8b913e25.png"
+    "static/media/one.487a565a.jpg": "/final-project/static/media/one.487a565a.jpg",
+    "static/media/taiwan.8b913e25.png": "/final-project/static/media/taiwan.8b913e25.png",
+    "static/media/three.6f9f107d.jpg": "/final-project/static/media/three.6f9f107d.jpg",
+    "static/media/two.650b3239.jpg": "/final-project/static/media/two.650b3239.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0abe1cdf.js",
     "static/css/2.e25789d4.chunk.css",
-    "static/js/2.da4e6e18.chunk.js",
+    "static/js/2.fc659616.chunk.js",
     "static/css/main.c031c832.chunk.css",
-    "static/js/main.456bf13e.chunk.js"
+    "static/js/main.3948f035.chunk.js"
   ]
 }
