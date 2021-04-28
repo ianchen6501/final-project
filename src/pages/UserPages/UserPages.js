@@ -207,12 +207,12 @@ function Schedule({
 }) {
   const start = scheduleData.dateRange.start;
   const end = scheduleData.dateRange.end;
-  const startData = `
+  const startDate = `
     ${new Date(start).getFullYear().toString()}, 
     ${(new Date(start).getMonth() + 1).toString()}, 
     ${new Date(start).getDate().toString()}
   `;
-  const endData = `
+  const endDate = `
     ${new Date(end).getFullYear().toString()}, 
     ${(new Date(end).getMonth() + 1).toString()}, 
     ${new Date(end).getDate().toString()}
@@ -227,7 +227,7 @@ function Schedule({
         <LeftDownContainer>
           <SubTitle>{scheduleData.location}</SubTitle>
           <SubTitle>
-            {startData}-{endData}
+            {startDate}-{endDate}
           </SubTitle>
         </LeftDownContainer>
       </LeftContainer>
@@ -307,58 +307,56 @@ export default function UserPage() {
     history.push("/");
   }
 
-  if (!schedules || isChangingIsFinished) {
+  if (isChangingIsFinished) {
     return <LoadingPage />;
   }
 
-  if (schedules) {
-    return (
-      <Container>
-        <SideList>
-          <SideButton
-            onClick={() => {
-              setButtonActive("unfinish");
-              dispatch(getUnfinishedSchedules(userData.id));
-            }}
-            $active={buttonActive === "unfinish"}
-          >
-            未完成
-          </SideButton>
-          <SideButton
-            onClick={() => {
-              setButtonActive("finish");
-              dispatch(getFinishedSchedules(userData.id));
-            }}
-            $active={buttonActive === "finish"}
-          >
-            已完成
-          </SideButton>
-          <SideButton
-            onClick={() => {
-              setButtonActive("add");
-              history.push("/create");
-            }}
-            $active={buttonActive === "add"}
-          >
-            新增
-          </SideButton>
-        </SideList>
-        <ScheduleWrapper>
-          {schedules.length ? (
-            schedules.map((scheduleData, index) => (
-              <Schedule
-                key={index}
-                scheduleData={scheduleData}
-                handleDeleteOutlinedOnClick={handleDeleteOutlinedOnClick}
-                handleCheckboxOnChange={handleCheckboxOnChange}
-                handleScheduleTitleOnClick={handleScheduleTitleOnClick}
-              />
-            ))
-          ) : (
-            <Reminder>目前沒有行程喔!</Reminder>
-          )}
-        </ScheduleWrapper>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <SideList>
+        <SideButton
+          onClick={() => {
+            setButtonActive("unfinish");
+            dispatch(getUnfinishedSchedules(userData.id));
+          }}
+          $active={buttonActive === "unfinish"}
+        >
+          未完成
+        </SideButton>
+        <SideButton
+          onClick={() => {
+            setButtonActive("finish");
+            dispatch(getFinishedSchedules(userData.id));
+          }}
+          $active={buttonActive === "finish"}
+        >
+          已完成
+        </SideButton>
+        <SideButton
+          onClick={() => {
+            setButtonActive("add");
+            history.push("/create");
+          }}
+          $active={buttonActive === "add"}
+        >
+          新增
+        </SideButton>
+      </SideList>
+      <ScheduleWrapper>
+        {schedules.length ? (
+          schedules.map((scheduleData, index) => (
+            <Schedule
+              key={index}
+              scheduleData={scheduleData}
+              handleDeleteOutlinedOnClick={handleDeleteOutlinedOnClick}
+              handleCheckboxOnChange={handleCheckboxOnChange}
+              handleScheduleTitleOnClick={handleScheduleTitleOnClick}
+            />
+          ))
+        ) : (
+          <Reminder>目前沒有行程喔!</Reminder>
+        )}
+      </ScheduleWrapper>
+    </Container>
+  );
 }

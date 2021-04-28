@@ -25,7 +25,7 @@ export const usersReducer = createSlice({
     isLoading: false,
     authTokenResponse: null,
     userData: null,
-    schedules: null,
+    schedules: [],
     scheduleData: null,
     createErrorMessage: null,
     registerErrorMessage: null,
@@ -80,7 +80,7 @@ export const registerUser = (username, password, nickname, email) => (
         dispatch(setRegisterErrorMessage(json.message));
         return { ok: false };
       } else {
-        setAuthTokenToLocalStorage(json.token);
+        // setAuthTokenToLocalStorage(json.token);
         dispatch(setUserData(json.userData));
         return { ok: true };
       }
@@ -134,7 +134,7 @@ export const login = (username, password) => (dispatch) => {
       dispatch(setLoginErrorMessage(json.message));
       return { ok: false };
     } else {
-      setAuthTokenToLocalStorage(json.token);
+      // setAuthTokenToLocalStorage(json.token);
       dispatch(setUserData(json.userData));
       return { ok: true };
     }
@@ -186,15 +186,20 @@ export const getFinishedSchedules = (id) => (dispatch) => {
   dispatch(setIsLoading(false));
 };
 
+//TODO: 配合修正 cookie 登入
 export const checkIsLogin = () => async (dispatch) => {
   dispatch(setIsLoading(true));
-  const token = await getAuthTokenFromLocalStorage();
-  if (token) {
-    const json = JSON.stringify({ token });
-    await getUserDataAPI(json).then((json) => {
-      dispatch(setUserData(json.userData));
-    });
-  }
+  // const token = await getAuthTokenFromLocalStorage();
+  // const token = true;
+  // if (token) {
+  //   const json = JSON.stringify({ token });
+  //   await getUserDataAPI().then((json) => {
+  //     dispatch(setUserData(json.userData));
+  //   });
+  // }
+  await getUserDataAPI().then((json) => {
+    dispatch(setUserData(json.userData));
+  });
   dispatch(setIsLoading(false));
 };
 

@@ -130,9 +130,9 @@ export default function LoginPage() {
     });
   };
 
-  if (userData) {
-    history.push("/");
-  }
+  // if (userData) {
+  //   history.push("/");
+  // }
 
   return (
     <FormWrapper $solidPlate={true}>
