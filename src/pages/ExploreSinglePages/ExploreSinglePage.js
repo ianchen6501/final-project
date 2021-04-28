@@ -94,7 +94,7 @@ export default function ExploreSinglePage() {
                     })}
                   </RoutineTitle>
                   <RoutineWrapper>
-                    {dailyRoutines[date] === true &&
+                    {dailyRoutines[date] &&
                       dailyRoutines[date].map((routine) => (
                         <Spot key={routine.id}>
                           <SpotInfo>

@@ -236,13 +236,11 @@ export const createSchedule = (
         .setDate(new Date(startDate).getDate() + i)
         .toString();
       dates[date] = [];
-      console.log(date);
     }
     return dates;
   }
 
   const dates = calcDates();
-  console.log(dates);
 
   const json = JSON.stringify({
     scheduleName,

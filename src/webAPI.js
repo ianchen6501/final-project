@@ -22,7 +22,6 @@ export function updateSchedule(url, json) {
     body: json,
   }).then((response) => response.json());
 }
-//TODO: 確認回傳資料
 export const getScheduleContent = (userId, scheduleId) => {
   return fetch(`${BASE_URL}/schedules/${userId}/${scheduleId}`).then((res) =>
     res.json()
@@ -127,7 +126,7 @@ export const deleteScheculeAPI = (id, json) => {
     body: json,
   }).then((result) => result.json());
 };
-//TODO:
+
 export const getUserDataAPI = () => {
   return fetch(`${BASE_URL}/users`, {
     // method: "GET",
